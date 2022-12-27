@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+}
+
+.calculator {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "answer answer answer answer"
+    "erase erase erase operators"
+    "numbers numbers numbers operators"
+    "numbers numbers numbers operators"
+    "numbers numbers numbers operators"
+    "numbers numbers numbers operators";
+    width: 400px;
+    height: 600px;
+}
+
+.answer {
+    grid-area: answer;
+    background-color: #000;
+    color: white;
+    font-size: 36px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 10px;
+}
+
+.erase {
+    grid-area: erase;
+    display: flex;
+}
+
+.numbers {
+    grid-area: numbers;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.operators {
+    grid-area: operators;
+    display: flex;
+    flex-direction: column;
+}
+
+.button {
+    cursor: pointer;
+    background-color:#d8d9db;
+    width: 25%;
+    font-size: 36px;
+}
+
+.operators .button {
+    background-color: #df974c;
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.erase .button {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.erase .button:first-of-type {
+    width: 66%;
+}
+
+.erase .button:last-of-type {
+    width: 34%;
+}
+
+.numbers .button {
+    height: 25%;
+    width: 33.3333%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.numbers .button:last-of-type {
+    width: 100%;
+}
