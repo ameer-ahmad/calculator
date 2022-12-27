@@ -56,6 +56,11 @@ body {
     background-color:#d8d9db;
     width: 25%;
     font-size: 36px;
+    border: 1px solid black;
+}
+
+.button:hover {
+    filter: brightness(1.05);
 }
 
 .operators .button {
@@ -66,6 +71,11 @@ body {
     justify-content: center;
     align-items: center;
     color: white;
+    border-right: none;
+}
+
+.operators .button:last-of-type {
+    border-bottom: none;
 }
 
 .erase .button {
@@ -76,11 +86,11 @@ body {
 }
 
 .erase .button:first-of-type {
-    width: 66%;
+    width: 66.66666%;
 }
 
 .erase .button:last-of-type {
-    width: 34%;
+    width: 33.33333%;
 }
 
 .numbers .button {
@@ -93,4 +103,5 @@ body {
 
 .numbers .button:last-of-type {
     width: 100%;
+    border-bottom: none;
 }
